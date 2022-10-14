@@ -1,15 +1,15 @@
 import React from 'react'
 
-const PlayerDetail = (props) => {
+const PlayerDetail = ({props}) => {
 
 
   return (
-    <div>
-        <div>
-            <img src={props.song.img_src} alt='' />
+    <div className='c-player--details'>
+        <div className='details-img'>
+            <img src={'props.song.img_src'} alt='' />
         </div>
-        <h3>{props.song.title}</h3>
-        <h4>{ props.song.artist }</h4>
+        <h3 className='details--title'>{props.title}</h3>
+        <h4 className='details--artist'>{ props.artist }</h4>
     </div>
   )
 }

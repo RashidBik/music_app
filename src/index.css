@@ -1,0 +1,102 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color:darkkhaki;
+}
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.c-palyer{
+    display: block;
+    background-color: midnightblue;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: inset -6px -6px 12px rgba(0,0,0,0.8), inset 6px 6px 12px rgba(red, green, blue, 0.4)
+}
+.c-palyer > h4{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+.c-palyer > p {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+.c-palyer --details .details-img {
+    position: relative;
+    width: fit-content;
+    margin: 50px auto;
+
+}
+.c-palyer--details .details-img img{
+display: block;
+margin: 0 auto;
+width: 100%;
+max-width: 250px;
+border-radius: 50%;
+box-shadow: 6px 6px 12px rgba(0,0,0,0.8), -6px -6px 12px rgba(red, green, blue, 0.4)
+
+}
+
+.c-palyer--details .details-title {
+    color: #eee;
+    font-size: 28px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(red, green, blue, 0.4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.c-palyer--details .details-artist{
+    text-align: center;
+    color: #aaa;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8), inset -2px -2px 4px rgba(red, green, blue, 0.4);
+    margin-bottom: 20px;
+}
+
+.c-palyer--controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.c-palyer--controls .ply-btn{
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 
+     4px 4px 10px rgba(0,0,0,0.8), 
+     -4px -4px 10px rgba(red, green, blue, 0.4),
+     inset -4px -4px 10px rgba(0,0,0,0.4),
+     inset 4px 4px 10px rgba(red, green, blue, 0.4);
+
+    border: none;
+    background: rgb(255, 234, 0);
+    color: #ffff;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+.c-palyer--controls .skip-btn {
+    background: none;
+    outline: none;
+    border:none;
+    color: #888;
+    font-size: 18px; 
+}

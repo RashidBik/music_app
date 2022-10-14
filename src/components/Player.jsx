@@ -1,11 +1,12 @@
 import React from 'react'
 import FontAwesome from 'react-fontawesome'
 import PlayerControl from './PlayerControl'
-
+import PlayerDetail from './PlayerDetail'
 
 const Player = (props) => {
+    // console.log(props);
   return (
-    <div>
+    <div className='c-player'>
       <audio>
 
       </audio>
@@ -13,7 +14,7 @@ const Player = (props) => {
         Playing now
       </h4>
       <PlayerDetail props={props.song} />
-      <p><strong>Next Up:</strong> {props.nextSong.title} by {props.nextSong.artist} </p>
+      <p><strong>Next Up:</strong> {props.song.title} by {props.song.artist} </p>
     </div>
   )
 }

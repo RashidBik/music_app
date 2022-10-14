@@ -5,14 +5,14 @@ import FontAwesome, { faPlay, faPause, faForward, faBackward} from 'react-fontaw
 const PlayerControl = () => {
 
     return (
-    <div>
-        <button>
+    <div className='c-player--controls'>
+        <button className='skip-btn'>
             <FontAwesomeIcon icons={faBackward} />
         </button>
-        <button>
+        <button className='play-btn'>
             <FontAwesome icons={faPlay}/>
         </button>
-        <button>
+        <button className='skip-btn'>
             <FontAwesome icons={faForward} />
         </button>
     </div>
