@@ -1,5 +1,7 @@
 import React from 'react'
 import FontAwesome from 'react-fontawesome'
+import PlayerControl from './PlayerControl'
+
 
 const Player = (props) => {
   return (
