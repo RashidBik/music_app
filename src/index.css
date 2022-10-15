@@ -17,21 +17,24 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    width: 300px;
+    /* width: 300px; */
 }
 
 .c-player {
     display: block;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
     -2px -2px 4px rgba(255, 255, 255, 0.4);
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);    
     padding: 50px;
     border-radius: 16px;
     box-shadow:inset -6px -6px 12px rgba(0,0,0,0.8), 
     inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+    width: 300px;
+    height: 99vh;
 }
 
 .c-player > h4 {
+    position: relative;
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -121,3 +124,86 @@ border: 2px solid rgb(255, 234, 0);
     color: green;
 }
 
+.redHeart {
+    position: absolute;
+    color:rgba(255, 0, 0, 0.8);
+    right: 0;
+}
+.whiteHeart {
+    position: absolute;
+    color:#fff;
+    right: 0;
+}
+
+.c-list {
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow:inset -6px -6px 12px rgba(0,0,0,0.8), 
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+    width: 300px;
+    height: 99vh;
+    color: #eee;
+}
+.all-row {
+    padding: 10px 2px;
+}
+.music-row {
+    /* background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);  */
+    color: #eee;
+    overflow: auto;
+    padding: 7px 5px;
+    margin: 4px 0;
+    border-bottom: 1px solid #ddd;
+    /* border-radius: 9px; */
+}
+.music-row:hover {
+    color: rgb(179, 176, 176);
+}
+.sortby {
+    padding: 2px;
+    margin-bottom: 5px;
+    /* background-color: #888; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.list--sort {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 2px;
+    outline: none;
+}
+.list--sort option{
+    background:#6d327c;
+    color:#fff;
+    outline: none;
+
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 80px;
+
+}
+input:focus{
+    border-bottom: 1px solid #ddd;
+
+}
+.search{
+    position: relative;
+    
+}
+.search span{
+    position: absolute;
+    right: 2px;
+}

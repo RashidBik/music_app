@@ -1,23 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Player from './components/Player';
-
+import {data} from '../Data';
+import List from './components/List';
 
 function App() {
-  const [songs, setSong] = useState([
-    {
-      title: 'TOEFL LESSON 1',
-      artist: 'Music Band',
-      img_src: '/images/flare.jpg',
-      src: '/music/TOEFLPod3.mp3',
-    },
-    {
-      title: 'TOEFL LESSON 2',
-      artist: 'HERN JONATAN',
-      img_src: '/images/wall.jpg',
-      src: '/music/TOEFL001.mp3',
-    }
-  ]);
+  const [songs, setSong] = useState(data);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
@@ -40,6 +28,7 @@ useEffect(() => {
         nextSongIndex={nextSongIndex}
         songs={songs}
         />    
+        <List />
     </div>
   )
 }

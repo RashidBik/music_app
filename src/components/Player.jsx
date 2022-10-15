@@ -1,12 +1,23 @@
 import React,{useState, useRef, useEffect} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faHeart} from '@fortawesome/free-solid-svg-icons'; 
+import { faHeart, faHeartCircleBolt} from '@fortawesome/free-solid-svg-icons'; 
 import PlayerControl from './PlayerControl'
 import PlayerDetail from './PlayerDetail'
 
 const Player = (props) => {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [favor, setFavor] = useState(true);
+    
+    const favorite = () => {
+      if(favor === true){
+        setFavor(false);
+      }else{
+        setFavor( true);
+      }
+    }
+  
+    
     useEffect(() => {
       if (isPlaying){
         console.log(audioEl.current.play());
@@ -48,8 +59,10 @@ const Player = (props) => {
       </audio>
       <h4>
         {isPlaying ? 'Playing now': 'Paused'}
+      <span className={favor ? 'redHeart': 'whiteHeart'} onClick={favorite}>
+     <FontAwesomeIcon  icon={favor ? faHeart: faHeartCircleBolt} /> 
+      </span>
       </h4>
-      {/* <FontAwesomeIcon  icon={faHeart} /> */}
       <PlayerDetail 
         props={props.songs[props.currentSongIndex]}
        />
