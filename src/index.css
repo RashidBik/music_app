@@ -137,6 +137,7 @@ border: 2px solid rgb(255, 234, 0);
 
 .c-list {
     display: block;
+    position: relative;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
     -2px -2px 4px rgba(255, 255, 255, 0.4);
     background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
@@ -203,4 +204,23 @@ input:focus{
 .search span{
     position: absolute;
     right: 2px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.2);
+    padding: 15px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 90px;
+    left: 0;
+    border-radius: 10px;
+}
+.footer .play{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }

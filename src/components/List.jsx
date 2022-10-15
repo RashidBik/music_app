@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { data } from '../../Data'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons'; 
+import { faMagnifyingGlass, faBars,faPlay, faPause, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'; 
 
 
 const List = () => {
@@ -44,8 +44,12 @@ return (
                 } 
             )}
         </div>
-        <div >
-            
+        <div className='footer' >
+            <div className='play'>
+                <FontAwesomeIcon icon={faBackward} />
+                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faForward} />
+            </div>
         </div>
     </div>
   )
