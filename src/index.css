@@ -152,13 +152,11 @@ border: 2px solid rgb(255, 234, 0);
     padding: 10px 2px;
 }
 .music-row {
-    /* background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);  */
     color: #eee;
     overflow: auto;
     padding: 7px 5px;
     margin: 4px 0;
     border-bottom: 1px solid #ddd;
-    /* border-radius: 9px; */
 }
 .music-row:hover {
     color: rgb(179, 176, 176);
@@ -166,7 +164,6 @@ border: 2px solid rgb(255, 234, 0);
 .sortby {
     padding: 2px;
     margin-bottom: 5px;
-    /* background-color: #888; */
 }
 
 .header {
