@@ -1,15 +1,14 @@
 import React from 'react'
 
 const PlayerDetail = ({props}) => {
-  console.log(props);
   return (
     <div className='c-player--details'>
         <div className='details-img'>
           <img src={props.img_src}
-           alt="" 
+           alt="an image" 
            className=''
-           width='120px'
-           height='90px'
+           width='190px'
+           height='190px'
            />
         </div>
         <h3 className='details--title'>{props.title}</h3>

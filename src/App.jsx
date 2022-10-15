@@ -40,7 +40,6 @@ useEffect(() => {
         nextSongIndex={nextSongIndex}
         songs={songs}
         />    
-        {/* <audio controls src="./public/music/TOEFL001.mp3">audio</audio>   */}
     </div>
   )
 }

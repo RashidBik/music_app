@@ -1,12 +1,12 @@
 import React,{useState, useRef, useEffect} from 'react'
-// import FontAwesome from 'react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faHeart} from '@fortawesome/free-solid-svg-icons'; 
 import PlayerControl from './PlayerControl'
 import PlayerDetail from './PlayerDetail'
 
 const Player = (props) => {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-
     useEffect(() => {
       if (isPlaying){
         console.log(audioEl.current.play());
@@ -14,8 +14,8 @@ const Player = (props) => {
       }else{
         audioEl.current.pause();
       }
-      
     });
+
  const skipSong = (forwards = true) => {
   if(forwards){
     props.setCurrentSongIndex(() => {
@@ -40,23 +40,29 @@ const Player = (props) => {
   }
  } 
 
-
   return (
     <div className='c-player'>
       <audio
-      src={props.songs[props.currentSongIndex].src} 
-      ref={audioEl}
-      ></audio>
-      <h4>Playing now</h4>
+        src={props.songs[props.currentSongIndex].src} 
+        ref={audioEl} >
+      </audio>
+      <h4>
+        {isPlaying ? 'Playing now': 'Paused'}
+      </h4>
+      {/* <FontAwesomeIcon  icon={faHeart} /> */}
       <PlayerDetail 
-      props={props.songs[props.currentSongIndex]}
+        props={props.songs[props.currentSongIndex]}
        />
-      <PlayerControl 
-      isPlaying={isPlaying} 
-      setIsPlaying={setIsPlaying}
-      skipSong={skipSong}
+      <PlayerControl
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        skipSong={skipSong}
        />
-      <p><strong>Next Up:</strong> {props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist} </p>
+      <p><strong>Next Up:</strong>
+        {props.songs[props.nextSongIndex].title}
+        {' '} by {' '}
+        {props.songs[props.nextSongIndex].artist} 
+      </p>
     </div>
   )
 }

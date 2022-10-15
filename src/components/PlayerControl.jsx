@@ -1,27 +1,24 @@
 import React from 'react'
-import {FontAwesomeIcon} from 'react-fontawesome';
-// import { faPlay, faPause, faForward, faBackward} from 'react-fontawesome'; 
-const ls = { faPlay:'s', faPause:'p', faForward:'h', faBackward:'i'}
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faPlay, faPause, faForward, faBackward} from '@fortawesome/free-solid-svg-icons'; 
+
 const PlayerControl = (props) => {
     return (
     <div className='c-player--controls'>
         <button className='skip-btn' 
         onClick={()=> props.skipSong(false)}>
-            {/* <FontAwesomeIcon 
-            icons={faBackward} /> */}
-            BACK
+            <FontAwesomeIcon 
+            icon={faBackward} />
         </button>
         <button 
         className='play-btn' 
         onClick={()=> props.setIsPlaying(!props.isPlaying)}>
-            {/* <FontAwesome 
-            icons={props.isPlaying ? faPause : faPlay}
-            /> */}
-            PLAY
+            <FontAwesomeIcon 
+            icon={props.isPlaying ? faPause : faPlay}
+            />
         </button>
         <button className='skip-btn' onClick={()=> props.skipSong(true)}>
-            {/* <FontAwesome icons={faForward} /> */}
-            NEXT
+        <FontAwesomeIcon icon={faForward} />
         </button>
     </div>
   )

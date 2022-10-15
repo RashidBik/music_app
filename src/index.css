@@ -1,28 +1,37 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 
+    'Arial Narrow', Arial, sans-serif;
 }
 
-body{
-    background-color:darkkhaki;
+body {
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
 }
-.App{
+
+.App {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    width: 300px;
 }
-.c-palyer{
+
+.c-player {
     display: block;
-    background-color: midnightblue;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
+    background-color: rgb(0, 0, 0);
     padding: 50px;
     border-radius: 16px;
-    box-shadow: inset -6px -6px 12px rgba(0,0,0,0.8), inset 6px 6px 12px rgba(red, green, blue, 0.4)
+    box-shadow:inset -6px -6px 12px rgba(0,0,0,0.8), 
+    inset 6px 6px 12px rgba(255, 255, 255, 0.4);
 }
-.c-palyer > h4{
+
+.c-player > h4 {
     color: #fff;
     font-size: 14px;
     text-transform: uppercase;
@@ -30,73 +39,85 @@ body{
     text-align: center;
 }
 
-.c-palyer > p {
+.c-player > p {
     color: #aaa;
     font-size: 14px;
     text-align: center;
     font-weight: 400;
 }
-.c-palyer --details .details-img {
+
+.c-player--details .details-img {
     position: relative;
     width: fit-content;
-    margin: 50px auto;
-
+    margin: 20px auto;
 }
-.c-palyer--details .details-img img{
+
+.c-player--details .details-img img {
 display: block;
 margin: 0 auto;
-width: 100%;
-max-width: 250px;
 border-radius: 50%;
-box-shadow: 6px 6px 12px rgba(0,0,0,0.8), -6px -6px 12px rgba(red, green, blue, 0.4)
+border: 2px solid rgb(255, 234, 0);
 
 }
 
-.c-palyer--details .details-title {
+.c-player--details .details--title {
     color: #eee;
-    font-size: 28px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(red, green, blue, 0.4);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+    -2px -2px 4px rgba(255, 255, 255, 0.4);
     text-align: center;
     margin-bottom: 10px;
 }
 
-.c-palyer--details .details-artist{
+.c-player--details .details--artist {
     text-align: center;
     color: #aaa;
     font-size: 20px;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.8), inset -2px -2px 4px rgba(red, green, blue, 0.4);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+    inset -2px -2px 4px rgba(red, green, blue, 0.4);
     margin-bottom: 20px;
 }
 
-.c-palyer--controls{
+.c-player--controls {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.c-palyer--controls .ply-btn{
+.c-player--controls .play-btn {
     display: flex;
     margin: 0 auto;
     padding: 20px;
     border-radius: 50%;
     box-shadow: 
      4px 4px 10px rgba(0,0,0,0.8), 
-     -4px -4px 10px rgba(red, green, blue, 0.4),
+     -4px -4px 10px rgba(255, 255, 255, 0.4),
      inset -4px -4px 10px rgba(0,0,0,0.4),
-     inset 4px 4px 10px rgba(red, green, blue, 0.4);
-
+     inset 4px 4px 10px rgba(255, 255, 255, 0.4);
     border: none;
     background: rgb(255, 234, 0);
     color: #ffff;
     font-size: 24px;
     cursor: pointer;
-
 }
-.c-palyer--controls .skip-btn {
+
+.play-btn:hover {
+    box-shadow: 
+    4px 4px 10px rgba(255, 0, 0, 0.8), 
+    -4px -4px 10px rgba(255, 255, 255, 0.4),
+    inset -4px -4px 10px rgba(0,0,0,0.4),
+    inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+}
+
+.c-player--controls .skip-btn {
     background: none;
     outline: none;
     border:none;
     color: #888;
     font-size: 18px; 
 }
+
+.skip-btn:hover {
+    color: green;
+}
+
