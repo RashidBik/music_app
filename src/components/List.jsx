@@ -1,18 +1,15 @@
 import React from 'react'
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { data } from '../../Data'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons'; 
 
-// let sortList = {name: 'name'}
+
 const List = () => {
     const [isSort, setIsSort] = useState('title');
-    // const sorted = useRef();
-    // const val = sorted.current;
-    // console.log(val);
-const handleSort = (event) => {
-    setIsSort(event.target.value);
-    }
+    const handleSort = (event) => {
+        setIsSort(event.target.value);
+        }
  
 return (
     <div className='c-list'>
