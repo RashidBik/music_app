@@ -22,6 +22,7 @@ return (
                 <option value='title'>Title</option>
                 <option value='name'>Name</option>
                 <option value='artist'>Artist</option>
+                <option value='favorite'>Favorite</option>
             </select>
             <div className='search'>
                 <input type="search"/>
