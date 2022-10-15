@@ -1,5 +1,5 @@
 import React,{useState, useRef, useEffect} from 'react'
-import FontAwesome from 'react-fontawesome'
+// import FontAwesome from 'react-fontawesome'
 import PlayerControl from './PlayerControl'
 import PlayerDetail from './PlayerDetail'
 
@@ -9,6 +9,7 @@ const Player = (props) => {
 
     useEffect(() => {
       if (isPlaying){
+        console.log(audioEl.current.play());
         audioEl.current.play();
       }else{
         audioEl.current.pause();
@@ -43,7 +44,7 @@ const Player = (props) => {
   return (
     <div className='c-player'>
       <audio
-      // src={porps.songs[props.current].src} 
+      src={props.songs[props.currentSongIndex].src} 
       ref={audioEl}
       ></audio>
       <h4>Playing now</h4>
@@ -53,8 +54,9 @@ const Player = (props) => {
       <PlayerControl 
       isPlaying={isPlaying} 
       setIsPlaying={setIsPlaying}
+      skipSong={skipSong}
        />
-      <p><strong>Next Up:</strong> {props.songs[nextSongIndex].title} by {props.songs[props.nextSongIndex].artist} </p>
+      <p><strong>Next Up:</strong> {props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist} </p>
     </div>
   )
 }

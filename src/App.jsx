@@ -6,16 +6,16 @@ import Player from './components/Player';
 function App() {
   const [songs, setSong] = useState([
     {
-      title: 'forget me',
+      title: 'TOEFL LESSON 1',
       artist: 'Music Band',
-      img_src: 'assetsimages',
-      src: 'musicsombody.mp3',
+      img_src: '/images/flare.jpg',
+      src: '/music/TOEFLPod3.mp3',
     },
     {
-      title: 'forget me',
-      artist: 'Music Band',
-      img_src: 'assetsimages',
-      src: 'musicsombody.mp3',
+      title: 'TOEFL LESSON 2',
+      artist: 'HERN JONATAN',
+      img_src: '/images/wall.jpg',
+      src: '/music/TOEFL001.mp3',
     }
   ]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -39,7 +39,8 @@ useEffect(() => {
         setCurrentSongIndex={setCurrentSongIndex}
         nextSongIndex={nextSongIndex}
         songs={songs}
-        />      
+        />    
+        {/* <audio controls src="./public/music/TOEFL001.mp3">audio</audio>   */}
     </div>
   )
 }
