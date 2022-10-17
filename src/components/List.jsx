@@ -48,7 +48,7 @@ return (
         <div className='footer' >
             <div className='play'>
                 <FontAwesomeIcon icon={faBackward} />
-                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faPlay || faPause} />
                 <FontAwesomeIcon icon={faForward} />
             </div>
         </div>
